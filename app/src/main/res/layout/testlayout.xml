@@ -15,33 +15,44 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/r1">
+    <TextView
+        android:id="@+id/notificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/notificationDate"
+        android:layout_margin="5dp"
+        android:text="Title"
+        android:textSize="24dp" />
 
-            <TextView
-                android:id="@+id/notificationTitle"
-                android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/notificationDate"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Date"
+        android:textSize="20dp" />
+</RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/r1"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Title"
-                android:textSize="24dp" />
+                android:id="@+id/r2">
+                <TextView
+                    android:id="@+id/notificationDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Description"
+                    android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/notificationDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/notificationTitle"
-                android:layout_margin="5dp"
-                android:text="Description"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/notificationDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_toEndOf="@id/notificationTitle"
-                android:text="Date"
-                android:textSize="20dp" />
-
+            </RelativeLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
